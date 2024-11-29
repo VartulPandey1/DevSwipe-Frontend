@@ -29,7 +29,7 @@ function LoginPage() {
         { withCredentials: true }
       );
       dispatch(addUser(data.data));
-      navigate("/profile");
+      navigate("/Feed");
     } catch (err) {
       setErrorLogin(true)
       console.log(err);
