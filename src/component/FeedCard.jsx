@@ -9,8 +9,6 @@ function FeedCard(pros) {
   const dispatch = useDispatch();
   const [transition, setTransition] = useState(false);
   async function handleClick(action, userId) {
-    const data = REQUEST_URL + `request/send/${action}/${userId}`;
-    console.log(data);
     await axios.post(
       REQUEST_URL + `request/send/${action}/${userId}`,
       {},

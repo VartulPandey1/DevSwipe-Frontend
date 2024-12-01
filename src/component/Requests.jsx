@@ -86,7 +86,7 @@ const Requests = () => {
                       <button
                         onClick={() =>
                           handleClick(
-                            "accepted",
+                            "rejected",
                             data?.connectionRequestFrom?._id
                           )
                         }
@@ -97,7 +97,7 @@ const Requests = () => {
                       <button
                         onClick={() =>
                           handleClick(
-                            "rejected",
+                            "accepted",
                             data?.connectionRequestFrom?._id
                           )
                         }
