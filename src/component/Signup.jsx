@@ -116,7 +116,7 @@ function Signup() {
           onChange={(e) => setGender(e.target.value)}
           className="select select-bordered w-full max-w-xs my-2 min-w-96 "
         >
-          <option disabled value="Gender">
+          <option selected disabled value="">
             Gender
           </option>
           <option value="Male">Male</option>
