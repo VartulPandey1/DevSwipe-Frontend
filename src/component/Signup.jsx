@@ -23,9 +23,9 @@ function Signup() {
         {
           firstName: firstName,
           lastName: lastName,
-          emailId: emailId,
+          emailId: emailId.toLowerCase(),
           password: password,
-          gender: gender,
+          gender: gender.toLowerCase(),
           about: about,
           photoURL: photoURL,
           skills: skills,

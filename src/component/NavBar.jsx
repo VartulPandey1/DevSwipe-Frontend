@@ -10,7 +10,6 @@ function NavBar() {
   const navigate = useNavigate();
   const isUserLoggedIn = useSelector((store) => store.user.credentialAvailable);
   const userData = useSelector((store) => store.user.items);
-
   const musicPlaying = useSelector((store) => store.music.isPlaying);
   console.log("musicPlaying = " + musicPlaying);
   async function handleLogout() {
@@ -59,7 +58,7 @@ function NavBar() {
           </svg>
         </label>
         <div>
-          {  userData?.firstName ? <span>Hi, {userData?.firstName}</span>:null}
+          {  userData?.firstName ? <span>Hi, {userData?.firstName.replace(userData?.firstName[0],userData?.firstName[0].toUpperCase())}</span>:null}
         </div>
         <div className="dropdown dropdown-end">
         

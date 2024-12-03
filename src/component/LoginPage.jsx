@@ -23,7 +23,7 @@ function LoginPage() {
       const data = await axios.post(
         REQUEST_URL + "login",
         {
-          emailId: email,
+          emailId: email.toLowerCase(),
           password: password,
         },
         { withCredentials: true }
