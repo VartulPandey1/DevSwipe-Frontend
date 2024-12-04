@@ -3,15 +3,12 @@ import { removeUser, unAuthorizedUser } from "../redux/UserSlice";
 import { Link, useNavigate } from "react-router-dom";
 import { REQUEST_URL } from "../utils/Constants";
 import axios from "axios";
-import { playMusic, stopMusic } from "../redux/MusicSlice";
 
 function NavBar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isUserLoggedIn = useSelector((store) => store.user.credentialAvailable);
   const userData = useSelector((store) => store.user.items);
-  const musicPlaying = useSelector((store) => store.music.isPlaying);
-  console.log("musicPlaying = " + musicPlaying);
   async function handleLogout() {
     await axios.get(REQUEST_URL + "logout", { withCredentials: true });
     dispatch(removeUser());
@@ -28,11 +25,6 @@ function NavBar() {
           ETinder
         </Link>
       </div>
-      <button
-        onClick={() => {
-          musicPlaying ? dispatch(stopMusic()) : dispatch(playMusic());
-        }}
-      ></button>
       <div className="flex-none gap-2 mr-5">
         <label className="swap swap-rotate">
           <input

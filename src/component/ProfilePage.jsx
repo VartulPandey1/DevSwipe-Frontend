@@ -10,9 +10,6 @@ const ProfilePage = () => {
   const [age, setAge] = useState("");
   const [showSuccessToast, setShowSuccessToast] = useState(false);
   const [showUnSuccessToast, setShowUnSuccessToast] = useState(false);
- 
-  const musicPlaying = useSelector((store)=>store.music.isPlaying)
-
   
   async function getUserDetail() {
     const userDetail = await axios.get(REQUEST_URL + "profile/view", {
@@ -25,22 +22,6 @@ const ProfilePage = () => {
   }
   const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
   
-  console.log("musicPlayingss = "+ musicPlaying)
-  if(!musicPlaying)
-  {
-    if (audio) {
-      try{
-      audio.pause();
-      audio.currentTime = 0;
-      }catch(err){
-        console.log(err)
-      }
-    }
-  }else{
-    audio.play()
-    setTimeout(()=>{
-      audio.pause()
-    },5000)
     // .catch((error) => {
     //   console.error('Audio playback failed:', error);
     // });
