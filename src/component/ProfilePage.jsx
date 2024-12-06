@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { REQUEST_URL } from "../utils/Constants";
-import { useSelector } from "react-redux";
 
 const ProfilePage = () => {
   const [firstName, setFirstName] = useState("");
@@ -20,12 +19,7 @@ const ProfilePage = () => {
     setphotoURL(userDetail.data.photoURL);
     setAge(userDetail.data.age);
   }
-  const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
   
-    // .catch((error) => {
-    //   console.error('Audio playback failed:', error);
-    // });
-  }
   async function handleSubmit() {
     const result = await axios.put(
       REQUEST_URL + "profile/edit",
@@ -55,6 +49,7 @@ const ProfilePage = () => {
     getUserDetail();
 
   }, []);
+  
   return (
     <>
       {showSuccessToast && (
