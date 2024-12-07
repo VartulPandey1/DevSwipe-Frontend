@@ -31,13 +31,14 @@ function FeedCard(pros) {
     <>
       {userData?._id ? (
         <div
-          onClick={() => cardClicked()}
+          
           className={`bg-base-300 rounded-3xl h-3/4 w-1/3 relative  transition-transform duration-500 ${
             rotated ? "rotate-180" : ""
           }`}
         >
-          <figure className="h-full w-full ">
+          <figure onClick={() => cardClicked()} className="h-full w-full ">
             <img
+            
               className={`bg-gradient-to-r from-sky-500 to-indigo-500 object-cover object-center w-full h-full rounded-3xl transition-opacity duration-1000 ${
                 rotated ? "opacity-50" : "opacity-100"
               }`}
@@ -46,7 +47,7 @@ function FeedCard(pros) {
             ></img>
           </figure>
           {!rotated ? (
-            <div className="absolute backdrop-blur-sm w-full h-1/6 bg-black/50  bottom-0 rounded-b-3xl">
+            <div  className="absolute backdrop-blur-sm w-full h-1/6 bg-black/50  bottom-0 rounded-b-3xl">
               <div
                 className={`{flex justify-center align-around ${
                   transition
@@ -69,21 +70,21 @@ function FeedCard(pros) {
               </div>
             </div>
           ) : (
-            <div className="absolute left-0 top-0 rotate-180 rounded-b-3xl">
-              <div className="hero bg-base-200 h-full">
-                <div className="hero-content flex-col lg:flex-row">
-                  <div>
-                    <h1 className="text-5xl font-bold">{`${userData?.firstName} ${userData?.lastName}`}</h1>
-                    <h1 className="py-6">
-                      {userData?.age}
-                    </h1>
-                    <h1 className="py-6">
+            <div className="absolute left-0 top-0 rotate-180 rounded-3xl">
+              <img onClick={() => cardClicked()} className="h-80 w-full rounded-t-3xl object-cover" src={userData?.photoURL}></img>
+              <div onClick={() => cardClicked()} className="hero bg-base-200 rounded-b-3xl  " >
+                <div className="hero-content flex-col lg:flex-row rounded-b-3xl h-96">
+                  <div className="rounded-b-3xl h-full flex flex-col">
+                    <span className="text-5xl font-bold h-1/4">{`${userData?.firstName} ${userData?.lastName} (${userData?.age})`}</span>
+                    {/* <h1 className="py-6 text-2xl p-0">
+                      
+                    </h1> */}
+                    <span className="py-0 h-1/4 text-4xl">
                       {userData?.gender}
-                    </h1>
-                    <p className="py-6">
+                    </span>
+                    <p  className="py-0 h-2/4 overflow-hidden">
                       {userData?.about}
                     </p>
-                    <button className="btn btn-primary">Get Started</button>
                   </div>
                 </div>
               </div>
