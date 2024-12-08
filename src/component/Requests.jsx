@@ -22,7 +22,6 @@ const Requests = () => {
       const data = await axios.get(REQUEST_URL + "user/requests", {
         withCredentials: true,
       });
-      console.log(data);
       dispatch(setRequestUsers(data?.data));
     } catch (err) {
       console.log(err);
@@ -35,7 +34,7 @@ const Requests = () => {
 
   return (
     <>
-      {userData ? (
+      {userData.length ? (
         <div className="overflow-x-auto w-full h-full">
           <table className="table">
             <thead>
@@ -113,7 +112,7 @@ const Requests = () => {
           </table>
         </div>
       ) : (
-        <h3>No Request available!!</h3>
+        <h3 className="text-4xl">🐺  𝓝𝓸 𝓡𝓮𝓺𝓾𝓮𝓼𝓽 𝓪𝓿𝓪𝓲𝓵𝓪𝓫𝓵𝓮!!  🐺</h3>
       )}
     </>
   );

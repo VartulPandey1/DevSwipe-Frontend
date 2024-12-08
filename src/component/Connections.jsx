@@ -20,7 +20,7 @@ const Connections = () => {
 
   return (
     <>
-      {userData ? (
+      {userData.length ? (
         <div className="overflow-x-auto w-full h-full">
           <table className="table">
             {/* head */}
@@ -35,7 +35,6 @@ const Connections = () => {
               </tr>
             </thead>
             <tbody>
-              {/* row 1 */}
               {userData.map((data, key) => {
                 return (
                   <tr key={key}>
@@ -77,7 +76,7 @@ const Connections = () => {
           </table>
         </div>
       ) : (
-        <h3>No connection available!!</h3>
+        <h3 className="text-4xl">🐺  𝓝𝓸 𝓬𝓸𝓷𝓷𝓮𝓬𝓽𝓲𝓸𝓷 𝓪𝓿𝓪𝓲𝓵𝓪𝓫𝓵𝓮!!  🐺</h3>
       )}
     </>
   );
