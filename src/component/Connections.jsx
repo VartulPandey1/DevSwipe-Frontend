@@ -46,28 +46,28 @@ const Connections = () => {
                         <div className="avatar">
                           <div className="mask mask-squircle h-12 w-12 text-center">
                             <img
-                              src={data?.connectionRequestTo?.photoURL}
+                              src={data?.photoURL}
                               alt="Avatar Tailwind CSS Component"
                             />
                           </div>
                         </div>
                         <div>
                           <div className="font-bold">
-                            {data?.connectionRequestTo?.firstName}{" "}
-                            {data?.connectionRequestTo?.lastName}
+                            {data?.firstName}{" "}
+                            {data?.lastName}
                           </div>
                           <div className="text-sm opacity-50">
-                            {data?.connectionRequestTo?.age}
+                            {data?.age}
                           </div>
                         </div>
                       </div>
                     </td>
                     <td className="text-center"> 
-                      {data?.connectionRequestTo?.gender}
+                      {data?.gender}
                       <br />
                     </td>
-                    <td className="text-center">{data?.connectionRequestTo?.skills}</td>
-                    <td className="text-center">{data?.connectionRequestTo?.about}</td>
+                    <td className="text-center">{data?.skills}</td>
+                    <td className="text-center">{data?.about}</td>
                     
                   </tr>
                 );
