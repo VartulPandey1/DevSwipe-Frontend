@@ -39,13 +39,13 @@ function LoginPage() {
   return (
     <div className="hero bg-base-100  h-full w-full w-screen">
       <div className="hero-content bg-base-300 flex-col lg:flex-row-reverse rounded-lg w-1/2">
-        <div className="text-center lg:text-left">
+        <div className="text-center lg:text-left w-1/2">
           <h1 className="text-5xl font-bold">Log in now!</h1>
           <p className="py-6">
             {loginPageQuotes[Math.floor(Math.random()*loginPageQuotes.length)]}
           </p>
         </div>
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl w-1/2">
           <form className="card-body">
             <div className="form-control">
               <label className="label">
