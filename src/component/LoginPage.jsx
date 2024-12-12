@@ -1,6 +1,6 @@
 import axios from "axios";
 import { loginPageQuotes } from "../utils/Constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addUser } from "../redux/UserSlice";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -8,6 +8,7 @@ import { REQUEST_URL } from "../utils/Constants";
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [quote, setQuote] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [errorLogin,setErrorLogin] = useState(false)
@@ -36,13 +37,17 @@ function LoginPage() {
       console.log(err);
     }
   }
+
+  useEffect(()=>{
+    setQuote(loginPageQuotes[Math.floor(Math.random()*loginPageQuotes.length)])
+  },[])
   return (
     <div className="hero bg-base-100  h-full w-full w-screen">
       <div className="hero-content bg-base-300 flex-col lg:flex-row-reverse rounded-lg w-1/2">
         <div className="text-center lg:text-left w-1/2">
           <h1 className="text-5xl font-bold">Log in now!</h1>
           <p className="py-6">
-            {loginPageQuotes[Math.floor(Math.random()*loginPageQuotes.length)]}
+            {quote}
           </p>
         </div>
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl w-1/2">

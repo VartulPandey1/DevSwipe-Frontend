@@ -29,7 +29,7 @@ const Body = () => {
   },[]);
 
   return (
-    <div className="h-full flex flex-col justify-between items-center">
+    <div className="h-full flex flex-col justify-between items-center overflow-hidden">
       <NavBar />
       <Outlet />
       <Footer />
