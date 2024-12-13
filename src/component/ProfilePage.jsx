@@ -69,14 +69,14 @@ const ProfilePage = () => {
       <div className="card card-side bg-base-300 shadow-xl">
         <figure className="artboard phone-3 rounded">
           <img
-            className="object-cover rounded-3xl"
+            className="object-cover rounded-3xl pl-1"
             src={photoURL}
             alt="UserPhoto"
           />
         </figure>
         <div className="card-body flex justify-evenly">
           <label className="input input-bordered flex items-center gap-2">
-            FirstName
+            FirstName:
             <input
               type="text"
               onChange={(e) => setFirstName(e.target.value)}
@@ -86,7 +86,7 @@ const ProfilePage = () => {
             />
           </label>
           <label className="input input-bordered flex items-center gap-2">
-            Last Name
+            Last Name: 
             <input
               type="text"
               className="grow"
@@ -96,7 +96,7 @@ const ProfilePage = () => {
             />
           </label>
           <label className="input input-bordered flex items-center gap-2">
-            Photo URL
+            Photo URL:
             <input
               type="text"
               className="grow"
@@ -106,7 +106,7 @@ const ProfilePage = () => {
             />
           </label>
           <label className="input input-bordered flex items-center gap-2">
-            Age
+            Age:
             <input
               type="text"
               className="grow"
@@ -119,7 +119,7 @@ const ProfilePage = () => {
             onClick={(e) => {
               handleSubmit(e);
             }}
-            className="btn btn-wide"
+            className="btn btn-wide bg-sky-500 color text-black hover:bg-sky-700 hover:text-white "
           >
             Submit
           </button>
