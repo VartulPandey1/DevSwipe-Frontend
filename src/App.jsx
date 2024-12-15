@@ -8,6 +8,7 @@ import Feed from "./component/Feed";
 import Connections from "./component/Connections";
 import Requests from "./component/Requests";
 import Signup from "./component/Signup";
+import PasswordReset from "./component/PasswordResetPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="Feed" element={<Feed />} />
             <Route path="Connections" element={<Connections />} />
             <Route path="Requests" element={<Requests />} />
+            <Route path="PasswordReset" element={<PasswordReset/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
