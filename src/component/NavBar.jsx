@@ -84,6 +84,9 @@ function NavBar() {
                 <Link to="Requests">Requests</Link>
               </li>
               <li>
+                <Link to="PasswordReset">Reset Password</Link>
+              </li>
+              <li>
                 <a
                   onClick={() => {
                     handleLogout();
