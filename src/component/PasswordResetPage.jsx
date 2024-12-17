@@ -14,6 +14,9 @@ function PasswordReset() {
     if(newPassword!==confirmNewPassword)
     {
         setIsError(true)
+        setTimeout(()=>{
+          setIsError(false)
+        },4000)
         setErrorMessage("Please put the same password and confirm again")
         return
     }
@@ -28,9 +31,15 @@ function PasswordReset() {
       }
     );
     setIsError(true)
+    setTimeout(()=>{
+      setIsError(false)
+    },4000)
     setErrorMessage(data.data)
     }catch(err){
         setIsError(true)
+        setTimeout(()=>{
+          setIsError(false)
+        },4000)
         setErrorMessage(err.response.data)
     }
   }
@@ -38,7 +47,7 @@ function PasswordReset() {
     <>
     {isError && (
         <div className="toast-top top-9 fixed animate-bounce">
-          <div className="alert alert-success">
+          <div className="alert alert-error">
             <span>{errorMessage}</span>
           </div>
         </div>
