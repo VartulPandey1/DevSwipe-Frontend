@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 import { REQUEST_URL } from "../utils/Constants";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import LoginPage from "./loginPage";
 
 function Signup() {
   const navigate = useNavigate();
@@ -116,7 +117,7 @@ function Signup() {
           onChange={(e) => setGender(e.target.value)}
           className="select select-bordered w-full max-w-xs my-2 min-w-96 "
         >
-          <option selected disabled value="">
+          <option selected disabled value="Gender">
             Gender
           </option>
           <option value="Male">Male</option>
@@ -176,6 +177,7 @@ function Signup() {
         >
           Signup
         </button>
+        <Link to="/login">Already signup! Login</Link>
       </div>
     </>
   );
