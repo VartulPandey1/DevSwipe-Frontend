@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { REQUEST_URL } from "../utils/Constants";
+import { useNavigate } from "react-router-dom";
 
 function PasswordReset() {
   const [oldPassword, setOldPassword] = useState("");
@@ -8,7 +9,7 @@ function PasswordReset() {
   const [confirmNewPassword, setConfirmNewPassword] = useState("");
   const [isError,setIsError] = useState(false)
   const [errorMessage,setErrorMessage] = useState("")
-
+  const navigate= useNavigate()
   async function handleSubmit() {
     try{
     if(newPassword!==confirmNewPassword)
@@ -30,11 +31,13 @@ function PasswordReset() {
         withCredentials: true,
       }
     );
+    alert(data.data)
     setIsError(true)
     setTimeout(()=>{
       setIsError(false)
     },4000)
     setErrorMessage(data.data)
+    navigate("/Feed")
     }catch(err){
         setIsError(true)
         setTimeout(()=>{
