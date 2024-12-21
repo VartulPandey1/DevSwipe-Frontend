@@ -91,6 +91,7 @@ function FeedCard(pros) {
             </div>
           )}
           <div
+          title="Ignore👎"
             className={`absolute rounded-full border-2 top-1/3 ${
               transition
                 ? "-translate-x-40 translate-y-10"
@@ -107,7 +108,8 @@ function FeedCard(pros) {
             </button>
           </div>
           <div
-            className={`absolute rounded-full border-2 top-1/3 right-0 ${
+           title="Interested👍"
+            className={`absolute rounded-full border-2 top-1/3 right-0  ${
               transition
                 ? "translate-x-40 translate-y-10"
                 : "translate-y-0 translate-x-40"
