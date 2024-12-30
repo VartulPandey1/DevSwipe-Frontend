@@ -14,9 +14,12 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 
 
 ## Features
-- **React**: Used for building dynamic and interactive user interfaces.
-- **State Management**: Utilized React Context API to manage user authentication and match data.
-- **JWT Handling**: Managed JWT tokens for secure authentication and stored them using `cookie`.
+- **JWT Authentication**: Secure user login and registration using JSON Web Tokens.
+- **User Profiles**: Users can create, edit, and view profiles with basic details.
+- **Random Profile Viewing**: Users are shown random profiles they can either send connection requests to or reject.
+- **Connection Management**: Easily send and manage connection requests.
+- **Dynamic UI**: Interactive interface for browsing profiles and managing connections.
+
 
 
 
@@ -24,7 +27,8 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 
 - **React**: Front-end framework for building dynamic user interfaces.
 - **CSS**: Styling the app with modern CSS techniques for responsive layouts.
-
+- **State Management**: Utilized React Context API to manage user authentication and match data.
+- **JWT Handling**: Managed JWT tokens for secure authentication and stored them using `cookie`.
 
 
 
@@ -54,7 +58,7 @@ Run the app:
 
 ## Authors
 
-- [@VartulPandey](https://github.com/VartulPandey1/DigitalThrifting)
+- [@VartulPandey](https://github.com/VartulPandey1/DevSwipe-Frontend)
 
 
 ## Acknowledgements
